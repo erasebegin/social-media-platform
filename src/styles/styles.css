@@ -1,0 +1,30 @@
+body {
+  --pink: #f25eb0;
+  --green: #b9bf04;
+  --orangeLight: #f2b705;
+  --orangeDark: #f27405;
+  --red: #f23005;
+}
+
+.ui.fixed.menu {
+  background: rgb(242, 183, 5);
+  background: linear-gradient(
+    90deg,
+    rgba(242, 183, 5, 1) 0%,
+    rgba(242, 154, 5, 1) 60%,
+    rgba(242, 116, 5, 1) 100%
+  );
+}
+
+.ui.inverted.button {
+    background: var(--green);
+    transition: 200ms ease-in-out;
+}
+
+.ui.inverted.button:hover {
+    background: var(--pink);
+}
+
+.ui.main.container {
+    margin-top: 7rem;
+}
