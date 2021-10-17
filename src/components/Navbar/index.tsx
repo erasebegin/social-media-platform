@@ -1,13 +1,12 @@
 import React from "react";
 import { Container, Menu, Button } from "semantic-ui-react";
-import logo from "../../assets/images/sun-small.png";
 
 export default function Navbar() {
   return (
     <Menu inverted fixed="top">
       <Container>
         <Menu.Item header>
-          <img src={logo} alt="sun logo" />
+          <img src="/assets/images/sun-small.png" alt="sun logo" />
           <Menu.Item name="events" />
           <Menu.Item>
             <Button positive inverted content="Create event" />

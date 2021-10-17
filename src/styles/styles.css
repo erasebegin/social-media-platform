@@ -4,6 +4,8 @@ body {
   --orangeLight: #f2b705;
   --orangeDark: #f27405;
   --red: #f23005;
+
+  background: #f2b70522;
 }
 
 .ui.fixed.menu {
