@@ -1,9 +1,13 @@
 import EventListItem from "./EventListItem";
 
-export default function EventList() {
-    return (
-        <div>
-            <EventListItem />
-        </div>
-    )
+interface Props {
+  events: {};
+}
+
+export default function EventList({ events }: Props) {
+  return (
+    <div>
+      <EventListItem />
+    </div>
+  );
 }
