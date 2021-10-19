@@ -1,7 +1,10 @@
-import React from "react";
 import { Container, Menu, Button } from "semantic-ui-react";
 
-export default function Navbar() {
+interface Props {
+  setShowEventForm: (formState: boolean) => void;
+}
+
+export default function Navbar({ setShowEventForm }: Props) {
   return (
     <Menu inverted fixed="top">
       <Container>
@@ -9,7 +12,7 @@ export default function Navbar() {
           <img src="/assets/images/sun-small.png" alt="sun logo" />
           <Menu.Item name="events" />
           <Menu.Item>
-            <Button positive inverted content="Create event" />
+            <Button positive inverted content="Create event" onClick={() => setShowEventForm(true)} />
           </Menu.Item>
           <Menu.Item position="right">
             <Button basic inverted content="Login" />

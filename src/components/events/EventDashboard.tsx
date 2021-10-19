@@ -3,15 +3,20 @@ import EventForm from "./EventForm";
 import EventList from "./EventList";
 import sampleData from "../../api/sampleData";
 
-export default function EventDashboard() {
-  
+interface Props {
+  showEventForm: boolean;
+  setShowEventForm: (formState: boolean) => void;
+}
+
+export default function EventDashboard({ showEventForm, setShowEventForm }: Props) {
+
   return (
     <Grid>
       <Grid.Column width={10}>
-        <EventList events={sampleData}/>
+        <EventList events={sampleData} />
       </Grid.Column>
       <Grid.Column width={6}>
-        <EventForm />
+        {showEventForm && <EventForm setShowEventForm={setShowEventForm} />}
       </Grid.Column>
     </Grid>
   );

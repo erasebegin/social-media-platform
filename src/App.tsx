@@ -1,13 +1,17 @@
 import EventDashboard from "./components/events/EventDashboard";
 import Navbar from "./components/Navbar";
-import {Container} from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
+import { useState } from "react";
 
 function App() {
+
+  const [showEventForm, setShowEventForm] = useState(false);
+
   return (
     <>
-      <Navbar />
+      <Navbar setShowEventForm={setShowEventForm} />
       <Container className="main">
-        <EventDashboard />
+        <EventDashboard showEventForm={showEventForm} setShowEventForm={setShowEventForm} />
       </Container>
     </>
   );
