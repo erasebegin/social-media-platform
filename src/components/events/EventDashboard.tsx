@@ -1,9 +1,10 @@
 import { Grid } from "semantic-ui-react";
 import EventForm from "./EventForm";
 import EventList from "./EventList";
-import { sampleData } from "../../api/sampleData";
+import sampleData from "../../api/sampleData";
 
 export default function EventDashboard() {
+  
   return (
     <Grid>
       <Grid.Column width={10}>

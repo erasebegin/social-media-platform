@@ -1,23 +1,4 @@
-type Attendee = {
-  id: string;
-  name: string;
-  photoURL: string;
-};
-
-type Event = {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  description: string;
-  city: string;
-  venue: string;
-  hostedBy: string;
-  hostPhotoURL: string;
-  attendees: Attendee[];
-};
-
-export const sampleData: Event[] = [
+const sampleData = [
   {
     id: "1",
     title: "Trip to Empire State building",
@@ -67,3 +48,5 @@ export const sampleData: Event[] = [
     ],
   },
 ];
+
+export default sampleData;

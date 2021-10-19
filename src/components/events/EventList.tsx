@@ -1,13 +1,16 @@
 import EventListItem from "./EventListItem";
+import { Event } from "../../types";
 
 interface Props {
-  events: {};
+  events: Event[];
 }
 
 export default function EventList({ events }: Props) {
   return (
     <div>
-      <EventListItem />
+      {events.map((event: Event) => {
+        return <EventListItem key={event.id} eventData={event} />;
+      })}
     </div>
   );
 }
