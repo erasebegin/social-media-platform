@@ -12,7 +12,7 @@ export type Event = {
   description: string;
   city: string;
   venue: string;
-  hostedBy: string;
-  hostPhotoURL: string;
-  attendees: Attendee[];
+  hostedBy?: string;
+  hostPhotoURL?: string;
+  attendees?: Attendee[];
 };

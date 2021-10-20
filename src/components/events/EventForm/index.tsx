@@ -1,11 +1,14 @@
 import { useState, FormEvent, ChangeEvent } from 'react'
 import { Button, Form, Header, Segment } from "semantic-ui-react";
+import { Event } from '../../../types'
+import cuid from 'cuid'
 
 interface Props {
     setShowEventForm: (formState: boolean) => void;
+    handleCreateEvent: (event: Event) => void;
 }
 
-export default function EventForm({ setShowEventForm }: Props) {
+export default function EventForm({ setShowEventForm, handleCreateEvent }: Props) {
 
     const initialValues = {
         title: '',
@@ -20,6 +23,8 @@ export default function EventForm({ setShowEventForm }: Props) {
 
     function handleSubmit(e: FormEvent): void {
         e.preventDefault()
+        handleCreateEvent({ ...values, id: cuid() })
+        setShowEventForm(false)
     }
 
     function handleInputChange(e: ChangeEvent<HTMLInputElement>): void {

@@ -1,4 +1,6 @@
-const sampleData = [
+import { Event } from "../types";
+
+const sampleData: Event[] = [
   {
     id: "1",
     title: "Trip to Empire State building",
